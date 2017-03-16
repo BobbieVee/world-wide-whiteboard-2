@@ -28,9 +28,9 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('paint', obj );
 	});
 });
-
-server.listen(1337, function () {
-    console.log('The server is listening on port 1337!');
+var port = process.env.PORT || 1337;
+server.listen(port, function () {
+    console.log(`The server is listening on port ${port}!`);
 });
 
 app.use(express.static(path.join(__dirname, 'browser')));

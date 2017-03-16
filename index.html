@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <link href="style.css" type="text/css" rel="stylesheet">    
+        <link href="style.css" type="text/css" rel="stylesheet"> 
+
     </head>
     <body>
         <canvas id="paint"></canvas>
@@ -15,10 +16,12 @@
             <div class="marker" id="orange"></div>
             <div class="marker" id="yellow"></div>
             <div class="marker" id="brown"></div>
+            <div class="marker eraser" id="white">&nbsp&nbsp Eraser</div>
         </div>
 
         <script src="event-emitter.js"></script>
         <script src="whiteboard.js"></script>
+        <script src="socket.io/socket.io.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

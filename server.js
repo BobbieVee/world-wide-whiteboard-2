@@ -49,11 +49,11 @@ app.get('/reset', function(req, res, next){
 });
 
 app.get('/undo', function(req, res, next){
+	res.redirect('/');
 	for (var i = 0; i < 10; i++){
 		thePainting.pop();
-		// console.log("length = ",  thePainting.length)
 	};
 	_socket.emit('undo', thePainting);
 	_socket.broadcast.emit('undo', thePainting)	
-	res.redirect('/');
+	
 });

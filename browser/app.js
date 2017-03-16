@@ -21,6 +21,14 @@ socket.on('reset', function(){
     clearCTX();
 });
 
+var undoMe = function(){
+	socket.emit('undoMe');
+};
+
+var resetAll = function(){
+	socket.emit('resetAll');
+};
+
 socket.on('undo',  function(undo){
 	thePainting = undo;
 	clearCTX();
